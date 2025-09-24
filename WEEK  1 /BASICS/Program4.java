@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Program4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double a = sc.nextDouble();
@@ -17,3 +17,4 @@ public class Calculator {
         sc.close();
     }
 }
+
