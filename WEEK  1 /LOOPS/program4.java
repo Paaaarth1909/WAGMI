@@ -1,16 +1,16 @@
-// Calculate the sum of first N natural numbers using a loop.
+// Find the factorial of a number using a loop.
 
 import java.util.Scanner;
 
-public class SumOfNumbers {
+public class program4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int sum = 0;
+        long fact = 1;
         for(int i = 1; i <= n; i++) {
-            sum += i;
+            fact *= i;
         }
-        System.out.println(sum);
+        System.out.println(fact);
         sc.close();
     }
 }
