@@ -43,6 +43,7 @@ public class Program4 {
             }
             System.out.println(ans);
         }
+        in.close();
     }
 }
 
