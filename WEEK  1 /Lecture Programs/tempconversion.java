@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class temmpconversion {
+public class tempconversion {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter temp in C: ");
