@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Program3 {
+public class MultiDimension {
     public static void main(String[] args) {
         /*
              1 2 3
