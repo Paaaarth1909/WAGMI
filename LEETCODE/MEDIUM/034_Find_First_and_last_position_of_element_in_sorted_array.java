@@ -27,7 +27,7 @@ Constraints:
 nums is a non-decreasing array.
 -109 <= target <= 109
  */
-package LEETCODE.MEDIUM;
+
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {
