@@ -25,3 +25,40 @@ Constraints:
 nums is guaranteed to be rotated at some pivot.
 -104 <= target <= 104
  */
+class Solution {
+    public boolean search(int[] nums, int key) {
+        int n = nums.length;
+        if (n <= 0) return false;
+        if (n == 1) return nums[0] == key;
+        int low = 0, high = n - 1;
+        while (low <= high) {
+            if (nums[low] < nums[high] && (key < nums[low] || key > nums[high])) {
+                return false;
+            }
+            while (low < high && nums[low] == nums[high]) {
+                low++;
+            }
+            int mid = low + (high - low) / 2;
+            if (nums[mid] == key) return true;
+            if (nums[low] < nums[mid] && key >= nums[low] && key < nums[mid]) {
+                high = mid - 1;
+                continue;
+            }
+            if (nums[mid] < nums[high] && key > nums[mid] && key <= nums[high]) {
+                low = mid + 1;
+                continue;
+            }
+            if (nums[low] > nums[mid]) {
+                high = mid - 1;
+                continue;
+            }
+            if (nums[mid] > nums[high]) {
+                low = mid + 1;
+                continue;
+            }
+            low++;
+        }
+        return false;
+    }
+}
+
