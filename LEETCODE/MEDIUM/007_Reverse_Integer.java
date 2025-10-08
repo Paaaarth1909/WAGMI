@@ -22,7 +22,6 @@ Constraints:
 
 -231 <= x <= 231 - 1 
  */
-package LEETCODE.MEDIUM;
 class Solution {
     public int reverse(int x) {
         if (x == 0) return 0;
