@@ -37,18 +37,13 @@ Constraints:
 
 class Solution {
     public int maximumEnergy(int[] energy, int k) {
-        int ans = 0;
+        int n = energy.length;
         int maxVal = Integer.MIN_VALUE;
-
-        for (int i = 0; i < energy.length; i++) {
-            int temp = 0;
-            for (int j = i; j < energy.length; j += k) {
-                temp += energy[j];
-            }
-            maxVal = Math.max(maxVal, temp);
+        for (int i = n - 1; i >= 0; i--) {
+            if (i + k < n) energy[i] += energy[i + k];
+            maxVal = Math.max(maxVal, energy[i]);
         }
-
-        ans = maxVal;
-        return ans;
+        return maxVal;
     }
 }
+
