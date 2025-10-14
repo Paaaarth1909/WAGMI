@@ -33,5 +33,34 @@ Constraints:
 0 <= strs[i].length <= 100
 strs[i] consists of lowercase English letters.
  */
+import java.util.*;
 
- 
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> result = new ArrayList<>();
+        Map<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < strs.length; i++) {
+            String word = strs[i];
+            char[] chars = word.toCharArray();
+            Arrays.sort(chars);
+            String sortedWord = new String(chars);
+
+            if (!map.containsKey(sortedWord)) {
+                List<String> group = new ArrayList<>();
+                group.add(strs[i]);
+                result.add(group);
+                map.put(sortedWord, result.size() - 1);
+            } else {
+                result.get(map.get(sortedWord)).add(strs[i]);
+            }
+        }
+
+        for (List<String> group : result) {
+            Collections.sort(group);
+        }
+
+        return result;
+    }
+}
+
