@@ -45,8 +45,18 @@ pos is -1 or a valid index in the linked-list.
  *     }
  * }
  */
-import java.util.*;
-public class Solution {
+import java.util.HashSet;
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
+
+public class _Linked_List_cylce {
     public boolean hasCycle(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();
         while (head != null) {
@@ -57,3 +67,4 @@ public class Solution {
         return false;
     }
 }
+
