@@ -32,3 +32,26 @@ The number of the nodes in the list is in the range [0, 104].
 -105 <= Node.val <= 105
 pos is -1 or a valid index in the linked-list.
 */
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+import java.util.*;
+public class LInked_List_Cycle_II_142 {
+    public ListNode detectCycle(ListNode head) {
+        HashSet<ListNode> set = new HashSet<>();
+        while (head != null) {
+            if (set.contains(head)) return head;
+            set.add(head);
+            head = head.next;
+        }
+        return null;
+    }
+}
