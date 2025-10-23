@@ -44,6 +44,21 @@ pos is -1 or a valid index in the linked-list.
  * }
  */
 import java.util.*;
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {}
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
 public class LInked_List_Cycle_II_142 {
     public ListNode detectCycle(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();
