@@ -19,3 +19,30 @@ Constraints:
 The number of nodes in the list is in the range [1, 105].
 0 <= Node.val <= 9
 */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+import java.util.*;
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ArrayList<Integer> list = new ArrayList<>();
+        while (head != null) {
+            list.add(head.val);
+            head = head.next;
+        }
+        int l = 0, r = list.size() - 1;
+        while (l < r) {
+            if (!list.get(l).equals(list.get(r))) return false;
+            l++;
+            r--;
+        }
+        return true;
+    }
+}
