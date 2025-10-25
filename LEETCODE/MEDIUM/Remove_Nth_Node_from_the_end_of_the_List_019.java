@@ -24,3 +24,33 @@ The number of nodes in the list is sz.
 0 <= Node.val <= 100
 1 <= n <= sz
 */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode curr = head;
+        int ls = 0;
+        while (curr != null) {
+            curr = curr.next;
+            ls++;
+        }
+        if (ls == n) {
+            if (ls > 1) return head.next;
+            return null;
+        }
+        curr = head;
+        for (int i = 0; i < ls - n - 1; i++) {
+            curr = curr.next;
+        }
+        curr.next = curr.next.next;
+        return head;
+    }
+ }   
