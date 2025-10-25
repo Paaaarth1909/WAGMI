@@ -25,23 +25,23 @@ Constraints:
 The number of nodes in the linked list is in the range [0, 104].
 -106 <= Node.val <= 106
  */
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+
+  //Definition for singly-linked list.
+   public class ODD_Even_Linked_list_328 {
+      int val;
+      ODD_Even_Linked_list_328 next;
+      ODD_Even_Linked_list_328() {}
+      ODD_Even_Linked_list_328(int val) { this.val = val; }
+      ODD_Even_Linked_list_328(int val, ODD_Even_Linked_list_328 next) { this.val = val; this.next = next; }
+  }
+
 class Solution {
-    public ListNode oddEvenList(ListNode head) {
+    public ODD_Even_Linked_list_328 oddEvenList(ODD_Even_Linked_list_328 head) {
         if (head == null || head.next == null) return head;
 
-        ListNode odd = head;
-        ListNode even = head.next;
-        ListNode evenHead = even;
+        ODD_Even_Linked_list_328 odd = head;
+        ODD_Even_Linked_list_328 even = head.next;
+        ODD_Even_Linked_list_328 evenHead = even;
 
         while (even != null && even.next != null) {
             odd.next = even.next;
