@@ -30,7 +30,7 @@ Constraints:
 1 <= nums.length <= 100
 1 <= nums[i] <= 100  */
 
-package LEETCODE.EASY;
+
 
 class Solution {
     public boolean check(int[] nums) {
