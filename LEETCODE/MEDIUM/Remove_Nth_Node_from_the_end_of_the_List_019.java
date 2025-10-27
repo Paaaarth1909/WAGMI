@@ -24,19 +24,19 @@ The number of nodes in the list is sz.
 0 <= Node.val <= 100
 1 <= n <= sz
 */
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+    //  
+ // Definition for singly-linked list.
+  public class Remove_Nth_Node_from_the_end_of_the_List_019 {
+      int val;
+      Remove_Nth_Node_from_the_end_of_the_List_019 next;
+      Remove_Nth_Node_from_the_end_of_the_List_019() {}
+      Remove_Nth_Node_from_the_end_of_the_List_019(int val) { this.val = val; }
+      Remove_Nth_Node_from_the_end_of_the_List_019(int val, Remove_Nth_Node_from_the_end_of_the_List_019 next) { this.val = val; this.next = next; }
+  }
+ /* */
 class Solution {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode curr = head;
+    public Remove_Nth_Node_from_the_end_of_the_List_019 removeNthFromEnd(Remove_Nth_Node_from_the_end_of_the_List_019 head, int n) {
+        Remove_Nth_Node_from_the_end_of_the_List_019 curr = head;
         int ls = 0;
         while (curr != null) {
             curr = curr.next;
