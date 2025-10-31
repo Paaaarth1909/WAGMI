@@ -37,3 +37,33 @@ Constraints:
 Methods pop, top and getMin operations will always be called on non-empty stacks.
 At most 3 * 104 calls will be made to push, pop, top, and getMin.
 */
+
+import java.util.Stack;
+
+class MinStack {
+    private Stack<Integer> stack;
+    private Stack<Integer> minStack;
+    public MinStack() {
+        stack = new Stack<>();
+        minStack = new Stack<>();
+    }
+    
+    public void push(int x) {
+        stack.push(x);
+        if (minStack.size() == 0 || x <= minStack.peek()) minStack.push(x);
+        else minStack.push(minStack.peek());
+    }
+    
+    public void pop() {
+        stack.pop();
+        minStack.pop();
+    }
+    
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int getMin() {
+        return minStack.peek();
+    }
+}
