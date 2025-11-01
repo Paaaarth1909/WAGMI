@@ -1,3 +1,7 @@
+package LEETCODE.EASY;
+
+import java.util.HashMap;
+
 /* The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
 
 You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
@@ -32,3 +36,24 @@ Constraints:
 All integers in nums1 and nums2 are unique.
 All the integers of nums1 also appear in nums2.
 */
+
+import java.util.Map;
+import java.util.Stack;
+
+class Solution {
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> map = new HashMap<>();
+        Stack<Integer> stack = new Stack<>();
+        for (int n : nums2) {
+            while (!stack.isEmpty() && stack.peek() < n) {
+                map.put(stack.pop(), n);
+            }
+            stack.push(n);
+        }
+        int[] res = new int[nums1.length];
+        for (int i = 0; i < nums1.length; i++) {
+            res[i] = map.getOrDefault(nums1[i], -1);
+        }
+        return res;
+    }
+}
