@@ -20,3 +20,13 @@ n == nums.length
 1 <= n <= 5 * 104
 -109 <= nums[i] <= 109
 */
+class Solution {
+    public int majorityElement(int[] nums) {
+        int count = 0, candidate = 0;
+        for (int n : nums) {
+            if (count == 0) candidate = n;
+            count += (n == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+}
