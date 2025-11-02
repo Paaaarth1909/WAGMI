@@ -24,6 +24,7 @@ Constraints:
 */
 
 import java.util.Arrays;
+import java.util.Stack;
 
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
