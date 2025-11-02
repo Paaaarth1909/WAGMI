@@ -22,6 +22,9 @@ Constraints:
 1 <= nums.length <= 104
 -109 <= nums[i] <= 109
 */
+
+import java.util.Arrays;
+
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
         int n = nums.length;
