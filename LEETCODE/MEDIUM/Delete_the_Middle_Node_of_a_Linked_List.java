@@ -38,21 +38,21 @@ Constraints:
 The number of nodes in the list is in the range [1, 105].
 1 <= Node.val <= 105
 */
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+
+  //Definition for singly-linked list.
+  public class Delete_the_Middle_Node_of_a_Linked_List {
+      int val;
+      Delete_the_Middle_Node_of_a_Linked_List next;
+      Delete_the_Middle_Node_of_a_Linked_List() {}
+      Delete_the_Middle_Node_of_a_Linked_List(int val) { this.val = val; }
+      Delete_the_Middle_Node_of_a_Linked_List(int val, Delete_the_Middle_Node_of_a_Linked_List next) { this.val = val; this.next = next; }
+  }
+
 class Solution {
-    public ListNode deleteMiddle(ListNode head) {
+    public Delete_the_Middle_Node_of_a_Linked_List deleteMiddle(Delete_the_Middle_Node_of_a_Linked_List head) {
         if (head == null || head.next == null) return null;
 
-        ListNode slow = head, fast = head, prev = null;
+        Delete_the_Middle_Node_of_a_Linked_List slow = head, fast = head, prev = null;
 
         while (fast != null && fast.next != null) {
             prev = slow;
