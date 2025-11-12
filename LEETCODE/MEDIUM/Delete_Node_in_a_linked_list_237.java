@@ -38,3 +38,17 @@ The number of the nodes in the given list is in the range [2, 1000].
 The value of each node in the list is unique.
 The node to be deleted is in the list and is not a tail node.
 */
+
+  // Definition for singly-linked list.
+  public class Delete_Node_in_a_linked_list_237 {
+      int val;
+      Delete_Node_in_a_linked_list_237 next;
+     Delete_Node_in_a_linked_list_237(int x) { val = x; }
+  }
+
+class Solution {
+    public void deleteNode(Delete_Node_in_a_linked_list_237 node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
+}
