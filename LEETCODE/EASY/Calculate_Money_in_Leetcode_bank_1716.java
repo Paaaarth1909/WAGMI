@@ -1,4 +1,4 @@
-package LEETCODE.EASY;
+
 
 /* Hercy wants to save money for his first car. He puts money in the Leetcode bank every day.
 
